@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) OneXeor 2019.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clNoNetworkBack"
+    android:layout_width="match_parent"
+    android:layout_height="247dp"
+    android:alpha="0"
+    android:background="@drawable/shadow_black_gradient_top_to_bottom"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clNoNetwork"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/abc_no_network_connection_scream"
+        android:translationY="-200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNoNetworkConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:drawableStart="@drawable/ic_connectivity"
+            android:drawableLeft="@drawable/ic_connectivity"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/font_itc_avant_garde_gothic_demi"
+            android:text="@string/failure_no_internet_connection"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimensionTitleTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="jelly_bean" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/font_itc_avant_garde_gothic_bold"
+            android:text="@string/settings"
+            android:textAllCaps="false"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/dimensionButtonTextSize"
+            android:theme="@style/Widget.MaterialComponents.Button"
+            app:backgroundTint="@color/colorWhite"
+            app:cornerRadius="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoNetworkConnection"
+            tools:targetApi="jelly_bean" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations.all {
+    resolutionStrategy {
+        force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    def coroutines_ver = '1.3.3'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_ver"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_ver"
+
+
+    def javaxAnnotationVersion = '1.0'
+    def javaxInjectVersion = '1'
+    api "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    api "javax.inject:javax.inject:${javaxInjectVersion}"
+
+}
+

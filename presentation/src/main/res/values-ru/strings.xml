@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test Task</string>
+    <string name="failure_no_internet_connection">Нет соединения с интернетом</string>
+    <string name="settings">Настройки</string>
+    <string name="unknown">Неизвестно</string>
+    <string name="failure_server_error">Ошибка сервера</string>
+</resources>
